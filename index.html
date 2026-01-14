@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💕</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Animated name -->
+    <h1 class="name">Anvayee Sharma 🤙🏽❤️‍🩹</h1>
+
+    <!-- Day counter -->
+    <p class="counter">
+      Day <span id="days"></span> together 💕
+    </p>
+
+    <!-- Main question -->
+    <h2>Will you be my Valentine? 💖</h2>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="yes-button" onclick="startMusic(); handleYesClick()">Yes</button>
+      <button class="no-button" onclick="startMusic(); handleNoClick()">No</button>
+    </div>
+  </div>
+
+  <!-- Background music -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+
+  <!-- Music starter (iPad-safe) -->
+  <script>
+    function startMusic() {
+      const music = document.getElementById("bgMusic");
+      if (music && music.paused) {
+        music.play();
+      }
+    }
+  </script>
+
+</body>
+</html>
